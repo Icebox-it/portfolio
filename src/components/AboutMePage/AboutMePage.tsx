@@ -7,7 +7,6 @@ const AboutMePage = () => {
       <h2 className="font-bold">About Me</h2>
       <p>はじめまして、加藤　千尋(necochi)と申します。</p>
       <p>現在バックエンドエンジニアとして、日々スキルを磨いています。</p>
-      <CareerPage />
     </div>
   );
 };

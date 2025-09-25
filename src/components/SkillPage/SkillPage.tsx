@@ -7,7 +7,6 @@ export default function SkillPage() {
   const [skills, setSkills] = useState<Skill[]>([]);
   const [openSkillId, setOpenSkillId] = useState<number | null>(null);
 
-  // APIからデータ取得
   const getSkills = async () => {
     const res = await fetch("http://localhost:3000/api/skills", {
       method: "GET",
@@ -17,7 +16,6 @@ export default function SkillPage() {
 
   useEffect(() => {
     getSkills().then((data) => {
-      // APIが { skills: [...] } を返す場合
       setSkills(data.skills ?? data);
     });
   }, []);

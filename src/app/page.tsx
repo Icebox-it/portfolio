@@ -15,11 +15,6 @@ export default function Home() {
       <div className="top text-center"></div>
       <AboutMePage />
       <SkillPage />
-      <div id="contact">
-        <Link href="/contact" className="text-decoration-none text-black">
-          <h1>Contact</h1>
-        </Link>
-      </div>
       <Link href="#" className="text-decoration-none text-black">
         <p>Topに戻る</p>
       </Link>

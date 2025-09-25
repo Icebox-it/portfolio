@@ -37,11 +37,6 @@ const Menu = () => {
                 経歴
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/contact" className="no-underline text-black">
-                CONTACT
-              </NavigationMenuLink>
-            </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </div>

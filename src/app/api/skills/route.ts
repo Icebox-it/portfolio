@@ -9,17 +9,11 @@ export interface Skill {
 }
 
 const skills: Skill[] = [
-  { id: 1, icon: "", name: "Java", level: "High", remark: "1.5" },
-  { id: 2, icon: "", name: "JavaScript", level: "High", remark: "" },
-  { id: 3, icon: "", name: "C#", level: "Low", remark: "2" },
-  {
-    id: 4,
-    icon: "",
-    name: "Oracle",
-    level: "High",
-    remark: "プロシージャ作成、基本的なDDL操作は可能",
-  },
-  { id: 5, icon: "", name: "Struts", level: "High", remark: "2" },
+  { id: 1, icon: "", name: "Java", level: "High", remark: "2.0" },
+  { id: 2, icon: "", name: "JavaScript", level: "High", remark: "2.0" },
+  { id: 3, icon: "", name: "C#", level: "Low", remark: "2.0" },
+  { id: 4, icon: "", name: "Oracle", level: "High", remark: "2.0" },
+  { id: 5, icon: "", name: "Struts", level: "High", remark: "2.0" },
 ];
 
 export const GET = async () => {

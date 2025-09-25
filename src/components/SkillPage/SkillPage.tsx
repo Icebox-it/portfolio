@@ -11,6 +11,9 @@ export default function SkillPage() {
     const res = await fetch("http://localhost:3000/api/skills", {
       method: "GET",
     });
+    if (!res.ok) {
+      throw new Error(`API error! status: ${res.status}`);
+    }
     return await res.json();
   };
 
@@ -48,7 +51,7 @@ export default function SkillPage() {
             >
               <div className="card card-body shadow-sm border-0">
                 <p>
-                  <strong>Level:</strong> {skill.level}
+                  <strong>Level:</strong> {skill.level}{" "}
                 </p>
                 <p>{skill.remark}</p>
               </div>

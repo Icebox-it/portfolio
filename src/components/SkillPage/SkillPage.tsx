@@ -28,7 +28,7 @@ export default function SkillPage() {
   };
 
   return (
-    <div id="skill" className="my-5">
+    <div id="skill" className="my-5 mb-5">
       <h2 className="text-center">Skills</h2>
       <div className="d-flex flex-wrap gap-4 justify-content-center">
         {skills.map((skill) => (

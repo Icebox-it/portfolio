@@ -3,6 +3,7 @@ import Link from "next/link";
 import SkillPage from "@/components/SkillPage/SkillPage";
 import AboutMePage from "@/components/AboutMePage/AboutMePage";
 import { Zen_Maru_Gothic } from "next/font/google";
+import CareerPage from "@/components/CareerPage/CareerPage";
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: ["300", "400", "500", "700", "900"],
   subsets: ["latin", "latin-ext"],
@@ -12,17 +13,10 @@ const zenMaruGothic = Zen_Maru_Gothic({
 export default function Home() {
   return (
     <div className={zenMaruGothic.className}>
-      <div className="top text-center"></div>
+      <div className="top text-center mb-5"></div>
       <AboutMePage />
+      <CareerPage />
       <SkillPage />
-      <div id="contact">
-        <Link href="/contact" className="text-decoration-none text-black">
-          <h1>Contact</h1>
-        </Link>
-      </div>
-      <Link href="#" className="text-decoration-none text-black">
-        <p>Topに戻る</p>
-      </Link>
     </div>
   );
 }

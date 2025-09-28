@@ -32,18 +32,18 @@ const Menu = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="#skill"
-              className="no-underline text-black"
-            >
-              SKILL
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
               href="#career"
               className="no-underline text-black"
             >
               経歴
+            </NavigationMenuLink>
+          </NavigationMenuItem>{" "}
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="#skill"
+              className="no-underline text-black"
+            >
+              SKILL
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>

@@ -9,11 +9,11 @@ export default function SkillPage() {
   const [openSkillId, setOpenSkillId] = useState<number | null>(null);
 
   const getSkills = async () => {
-    const res = await fetch("http://localhost:3000/api/skills", {
+    const res = await fetch("/api/skills", {
       method: "GET",
     });
     if (!res.ok) {
-      throw new Error(`API error! status: ${res.status}`);
+      throw new Error(`Error　for responce. status: ${res.status}`);
     }
     return await res.json();
   };
@@ -24,27 +24,20 @@ export default function SkillPage() {
     });
   }, []);
 
-  const toggleSkill = (id: number) => {
-    setOpenSkillId(openSkillId === id ? null : id);
-  };
-
   return (
-    <div id="skill" className="my-5 mb-5">
-      <h2 className="text-center">Skills</h2>
-      <div className="d-flex flex-wrap gap-4 justify-content-center">
+    <div id="skill" className="text-center my-5 mb-5 page">
+      <h2>Skills</h2>
+      <div className="d-flex flex-wrap justify-content-center gap-3">
         {skills.map((skill) => (
           <div
             key={skill.id}
-            className="d-flex flex-column align-items-center"
-            style={{ width: "75px", height: "75px" }}
+            className="d-flex flex-column border-2 rounded-4 skill-item shadow-sm"
           >
-            <div className="ratio ratio-1x1 border-2 rounded-4 padding-10px　overflow-hidden">
+            <div className="d-flex align-items-center justify-content-center flex-grow-1">
               <img
                 src={skill.icon}
                 alt={skill.name}
-                width={75}
-                height={75}
-                className="img-thumbnail"
+                className="img-fluid rounded-4 skill-icon"
               />
             </div>
             <p>{skill.name}</p>

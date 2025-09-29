@@ -45,7 +45,7 @@ export default function CareerPage() {
   const filledProjects = createFilledProjects(projects, itemsPerRow);
 
   return (
-    <div id="career" className="text-center mb-5">
+    <div id="career" className="text-center mb-5 page">
       <h2>職歴</h2>
       <div className="d-flex flex-wrap">
         {filledProjects.map((project, index) => {
@@ -57,20 +57,10 @@ export default function CareerPage() {
           return (
             <div
               key={project.id}
-              className="border-2 border-dark rounded-4 m-2 d-flex align-items-center justify-content-center"
-              style={{
-                width: `calc(${100 / itemsPerRow}% - 1rem)`,
-                aspectRatio: "1 / 1",
-                minWidth: "90px",
-                maxWidth: "180px",
-              }}
+              className="border-2 border-dark rounded-4 mx-auto d-flex align-items-center justify-content-center project-row"
             >
-              <p className="text-center m-0">
-                {isRealProject
-                  ? `${realProjectIndex}. ${project.name}`
-                  : `${
-                      projects.length + ((project as any).emptyIndex || 0) + 1
-                    }. comming soon...`}
+              <p className="m-0">
+                {isRealProject ? `${project.name}` : `comming soon...`}
               </p>
             </div>
           );

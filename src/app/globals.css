@@ -13,6 +13,28 @@
   background-repeat: no-repeat; /* 繰り返しなし */
 }
 
+.page {
+  width: 100vw;
+  height: 50vh;
+}
+
+.project-row {
+  width: 160px;
+  height: 160px;
+  aspect-ratio: 1 / 1;
+}
+
+.skill-item {
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1 / 1;
+}
+
+.skill-icon {
+  width: 75px;
+  height: 75px;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

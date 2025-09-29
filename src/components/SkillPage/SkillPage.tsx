@@ -31,7 +31,7 @@ export default function SkillPage() {
         {skills.map((skill) => (
           <div
             key={skill.id}
-            className="d-flex flex-column border-2 rounded-4 skill-item shadow-sm"
+            className="d-flex flex-column border-2 rounded-4 row-item shadow-sm"
           >
             <div className="d-flex align-items-center justify-content-center flex-grow-1">
               <img

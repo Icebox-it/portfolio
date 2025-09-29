@@ -57,7 +57,7 @@ export default function CareerPage() {
           return (
             <div
               key={project.id}
-              className="border-2 border-dark rounded-4 mx-auto d-flex align-items-center justify-content-center project-row"
+              className="border-2 border-dark rounded-4 mx-auto d-flex align-items-center justify-content-center row-item"
             >
               <p className="m-0">
                 {isRealProject ? `${project.name}` : `comming soon...`}

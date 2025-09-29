@@ -8,9 +8,9 @@
   width: 100vw;
   height: 100vh;
   background-color: beige;
-  background-size: cover; /* 全体にフィットさせる */
-  background-position: center; /* 中央に配置 */
-  background-repeat: no-repeat; /* 繰り返しなし */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page {
@@ -18,13 +18,7 @@
   height: 50vh;
 }
 
-.project-row {
-  width: 160px;
-  height: 160px;
-  aspect-ratio: 1 / 1;
-}
-
-.skill-item {
+.row-item {
   width: 150px;
   height: 150px;
   aspect-ratio: 1 / 1;

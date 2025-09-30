@@ -35,9 +35,9 @@ const Menu = () => {
               href="#career"
               className="no-underline text-black"
             >
-              経歴
+              開発経験
             </NavigationMenuLink>
-          </NavigationMenuItem>{" "}
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
               href="#skill"

@@ -2,18 +2,19 @@ import React from "react";
 
 const AboutMePage = () => {
   return (
-    <div className="text-center mb-5 page" id="aboutMe">
+    <div className="text-center page" id="aboutMe">
       <h2 className="font-bold">About Me</h2>
-      <div className="">
+      <div>
         <p>
-          はじめまして、XX XXと申します。
+          はじめまして、加藤 千尋と申します。
           <br />
           ポートフォリオサイトをご覧いただき、ありがとうございます。
         </p>
         <p>
-          新卒から3年間バックエンドの開発経験を通じて、
+          職業はシステムエンジニアです。
           <br />
-          JavaやSpring Frameworkを中心にスキルを磨いてきました。
+          SESでの開発経験を通じ、 JavaやSpring
+          Frameworkなど、主にバックエンドの開発経験を積んでまいりました。
         </p>
       </div>
     </div>

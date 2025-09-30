@@ -45,8 +45,8 @@ export default function CareerPage() {
   const filledProjects = createFilledProjects(projects, itemsPerRow);
 
   return (
-    <div id="career" className="text-center mb-5 page">
-      <h2>職歴</h2>
+    <div id="career" className="text-center page">
+      <h2>開発経験</h2>
       <div className="d-flex flex-wrap">
         {filledProjects.map((project, index) => {
           const isRealProject = !(project as any).isEmpty;
@@ -57,7 +57,7 @@ export default function CareerPage() {
           return (
             <div
               key={project.id}
-              className="border-2 border-dark rounded-4 mx-auto d-flex align-items-center justify-content-center row-item"
+              className="border-2 rounded-4 mx-auto d-flex align-items-center justify-content-center shadow row-item"
             >
               <p className="m-0">
                 {isRealProject ? `${project.name}` : `comming soon...`}

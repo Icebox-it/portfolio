@@ -25,13 +25,14 @@ export default function SkillPage() {
   }, []);
 
   return (
-    <div id="skill" className="text-center my-5 mb-5 page">
-      <h2>Skills</h2>
+    <div id="skill" className="text-center page">
+      <h2>Skills</h2>{" "}
+      <p>1:知見がある / 2:基本的な知識がある / 3:実務で使える</p>
       <div className="d-flex flex-wrap justify-content-center gap-3">
         {skills.map((skill) => (
           <div
             key={skill.id}
-            className="d-flex flex-column border-2 rounded-4 row-item shadow-sm"
+            className="d-flex flex-column border-2 rounded-4 row-item shadow"
           >
             <div className="d-flex align-items-center justify-content-center flex-grow-1">
               <img
@@ -40,7 +41,9 @@ export default function SkillPage() {
                 className="img-fluid rounded-4 skill-icon"
               />
             </div>
-            <p>{skill.name}</p>
+            <p>
+              {skill.name}({skill.level})
+            </p>
           </div>
         ))}
       </div>

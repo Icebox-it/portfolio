@@ -16,6 +16,7 @@
 .page {
   width: 100vw;
   height: 50vh;
+  padding-top: 50px;
 }
 
 .row-item {

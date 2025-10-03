@@ -14,12 +14,15 @@ import {
 
 const Menu = () => {
   return (
-    <div className="fixed-top w-100 d-flex justify-content-center bg-white opacity-60">
+    <div
+      className="fixed-top w-100 d-flex justify-content-center bg-white opacity-60"
+      style={{ backdropFilter: "blur(10px)" }}
+    >
       <NavigationMenu className="">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink href="/" className="no-underline text-black">
-              Home
+              HOME
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -35,9 +38,9 @@ const Menu = () => {
               href="#career"
               className="no-underline text-black"
             >
-              経歴
+              WORK
             </NavigationMenuLink>
-          </NavigationMenuItem>{" "}
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
               href="#skill"

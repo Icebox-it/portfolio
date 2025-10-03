@@ -7,10 +7,17 @@
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: beige;
-  background-size: cover; /* 全体にフィットさせる */
-  background-position: center; /* 中央に配置 */
-  background-repeat: no-repeat; /* 繰り返しなし */
+  background-color: #eee8aa;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page {
+  width: 100vw;
+  height: auto;
+  padding-top: 50px;
+  text-align: center;
 }
 
 @theme inline {

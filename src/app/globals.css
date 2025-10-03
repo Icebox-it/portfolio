@@ -7,7 +7,7 @@
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: beige;
+  background-color: #eee8aa;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,19 +15,9 @@
 
 .page {
   width: 100vw;
-  height: 50vh;
+  height: auto;
   padding-top: 50px;
-}
-
-.row-item {
-  width: 150px;
-  height: 150px;
-  aspect-ratio: 1 / 1;
-}
-
-.skill-icon {
-  width: 75px;
-  height: 75px;
+  text-align: center;
 }
 
 @theme inline {

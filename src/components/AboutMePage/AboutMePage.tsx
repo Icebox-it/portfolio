@@ -2,11 +2,12 @@ import React from "react";
 
 const AboutMePage = () => {
   return (
-    <div className="text-center page" id="aboutMe">
-      <h2 className="font-bold">About Me</h2>
+    <div className="page" id="aboutMe">
+      <h2 className="font-bold">私について</h2>
       <div>
         <p>
-          はじめまして、加藤 千尋と申します。
+          <br />
+          はじめまして、Necochiと申します。
           <br />
           ポートフォリオサイトをご覧いただき、ありがとうございます。
         </p>

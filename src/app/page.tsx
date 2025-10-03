@@ -22,6 +22,10 @@ export default async function Home() {
       <AboutMePage />
       <CareerPage />
       <SkillPage />
+      <div className="text-center page">
+        <h2>Link</h2>
+        <div>ここにGithubのリンクを貼る</div>
+      </div>
       <div className="page"></div>
     </div>
   );

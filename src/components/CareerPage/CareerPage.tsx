@@ -1,6 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Project } from "@/app/api/projects/route";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionTrigger,
+  AccordionItem,
+} from "@radix-ui/react-accordion";
 
 export default function CareerPage() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -16,55 +22,30 @@ export default function CareerPage() {
     return await res.json();
   };
 
-  const createFilledProjects = (projects: Project[], itemsPerRow: number) => {
-    const filledProjects = [...projects];
-    const remainder = projects.length % itemsPerRow; // .size → .length
-
-    if (remainder !== 0) {
-      const emptyItemsNeeded = itemsPerRow - remainder;
-
-      for (let i = 0; i < emptyItemsNeeded; i++) {
-        filledProjects.push({
-          id: `empty-${i}`,
-          name: "",
-          isEmpty: true,
-          emptyIndex: i,
-        } as any);
-      }
-    }
-
-    return filledProjects;
-  };
-
   useEffect(() => {
     getProjects().then((data) => {
       setProjects(data.projects ?? data);
     });
   }, []);
 
-  const filledProjects = createFilledProjects(projects, itemsPerRow);
-
   return (
-    <div id="career" className="text-center page">
-      <h2>開発経験</h2>
-      <div className="d-flex flex-wrap">
-        {filledProjects.map((project, index) => {
-          const isRealProject = !(project as any).isEmpty;
-          const realProjectIndex = isRealProject
-            ? projects.findIndex((p) => p.id === project.id) + 1
-            : null;
-
-          return (
-            <div
+    <div id="career" className="page">
+      <h2>Works</h2>
+      <div className="d-flex flex-wrap justify-content-center">
+        <Accordion type="single" collapsible className="w-75">
+          {projects.map((project) => (
+            <AccordionItem
               key={project.id}
-              className="border-2 rounded-4 mx-auto d-flex align-items-center justify-content-center shadow row-item"
+              className="border-dark border-2 shadow mb-2 rounded-4 p-2"
+              value={`item-${project.id}`}
             >
-              <p className="m-0">
-                {isRealProject ? `${project.name}` : `comming soon...`}
-              </p>
-            </div>
-          );
-        })}
+              <AccordionTrigger>{project.name}</AccordionTrigger>
+              <AccordionContent className="p-3">
+                {project.description}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </div>
   );

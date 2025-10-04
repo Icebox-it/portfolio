@@ -1,32 +1,32 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 import SkillPage from "@/components/SkillPage/SkillPage";
 import AboutMePage from "@/components/AboutMePage/AboutMePage";
-import { Zen_Maru_Gothic } from "next/font/google";
 import CareerPage from "@/components/CareerPage/CareerPage";
 import TopPage from "@/components/TopPage/TopPage";
-const zenMaruGothic = Zen_Maru_Gothic({
-  weight: ["300", "400", "500", "700", "900"],
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-});
+import LinkPage from "@/components/LinkPage/ LinkPage ";
+import Footer from "@/components/Footer/Footer";
+import { use, useEffect, useState } from "react";
+import { OverlayLoading } from "react-loading-randomizable";
 
-// const sleep = (ms: number): Promise<void> =>
-//   new Promise((resolve) => setTimeout(resolve, ms));
+export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  const timerMillSec = 1000;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, timerMillSec);
 
-export default async function Home() {
-  // await sleep(1000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <div className={zenMaruGothic.className}>
+    <div>
+      <OverlayLoading active={isLoading} />
       <TopPage />
       <AboutMePage />
       <CareerPage />
       <SkillPage />
-      <div className="text-center page">
-        <h2>Link</h2>
-        <div>ここにGithubのリンクを貼る</div>
-      </div>
-      <div className="page"></div>
+      <LinkPage />
+      <Footer />
     </div>
   );
 }
